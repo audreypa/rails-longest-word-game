@@ -1,5 +1,6 @@
-<h1>New game</h1>
+
 <div class="container">
+  <h1>New game</h1>
   <div class="container-letters">
     <div class="letters">
       <% @letters.each do |letter| %>
@@ -14,6 +15,6 @@
     <%= hidden_field_tag :letters, @letters %>
     <label for="word"> What is the longest word you can find man ?</label>
     <input type="text" name="word" id="word" placeholder="" required>
-    <input type="submit" value="Go">
+    <input type="submit" value="Go" id="go">
   </form>
 </div>
