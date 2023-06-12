@@ -1,0 +1,11 @@
+<h1>Result</h1>
+  <div class="result">
+    <% if @result == 0 %>
+      <p>Sorry but <scan> <%= @word.upcase %> </scan> does not seem to be a valid English word...</p>
+    <% elsif @result == @word %>
+      <p>Congratulations! <scan> <%= @word.upcase %> </scan> is a valid English word!</p>
+    <% else %>
+      <p>Sorry but <scan> <%= @word.upcase %> </scan> can't be built out of <%= @letters %></p>
+    <% end %>
+    <p><%= link_to "Play again", new_path%></p>
+  </div>
